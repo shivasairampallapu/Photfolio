@@ -8,14 +8,12 @@
 ────────────────────────────────────────── */
 const nav = document.getElementById('nav');
 
-// Add .stuck class on scroll to apply frosted glass effect
 window.addEventListener('scroll', () => {
   nav.classList.toggle('stuck', window.scrollY > 40);
 }, { passive: true });
 
-// Highlight the active nav link based on scroll position
 const sections = document.querySelectorAll('section[id]');
-const navLinks  = document.querySelectorAll('.nav-links a');
+const navLinks = document.querySelectorAll('.nav-links a');
 
 window.addEventListener('scroll', () => {
   let current = '';
@@ -30,7 +28,7 @@ window.addEventListener('scroll', () => {
 /* ──────────────────────────────────────────
    2. HAMBURGER MENU (mobile)
 ────────────────────────────────────────── */
-const hbg    = document.getElementById('hbg');
+const hbg = document.getElementById('hbg');
 const mobNav = document.getElementById('mobNav');
 
 hbg.addEventListener('click', () => {
@@ -38,7 +36,6 @@ hbg.addEventListener('click', () => {
   mobNav.classList.toggle('open');
 });
 
-// Close mobile menu when any link is tapped
 mobNav.querySelectorAll('a').forEach(link => {
   link.addEventListener('click', () => {
     hbg.classList.remove('open');
@@ -59,8 +56,6 @@ document.querySelectorAll('.rev').forEach(el => revealObserver.observe(el));
 
 /* ──────────────────────────────────────────
    4. SKILL BAR ANIMATIONS
-   Bars animate to their target width when
-   the skills section enters the viewport.
 ────────────────────────────────────────── */
 const skillObserver = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
@@ -87,10 +82,10 @@ document.querySelectorAll('.ach-row').forEach((row, i) => {
 });
 
 /* ──────────────────────────────────────────
-   6. CONTACT FORM — Simulated Submit
+   6. CONTACT FORM
 ────────────────────────────────────────── */
 const contactForm = document.getElementById('contactForm');
-const formOk      = document.getElementById('formOk');
+const formOk = document.getElementById('formOk');
 
 contactForm.addEventListener('submit', (e) => {
   e.preventDefault();
@@ -110,116 +105,53 @@ contactForm.addEventListener('submit', (e) => {
 if (window.matchMedia('(hover: hover)').matches) {
   const glow = document.createElement('div');
   glow.style.cssText = [
-    'position: fixed',
-    'pointer-events: none',
-    'z-index: 9999',
-    'width: 380px',
-    'height: 380px',
-    'border-radius: 50%',
-    'background: radial-gradient(circle, rgba(0,229,160,0.04) 0%, transparent 70%)',
-    'transform: translate(-50%, -50%)',
-    'transition: left 0.4s ease, top 0.4s ease',
-    'will-change: left, top',
+    'position:fixed', 'pointer-events:none', 'z-index:9999',
+    'width:380px', 'height:380px', 'border-radius:50%',
+    'background:radial-gradient(circle,rgba(0,229,160,0.04) 0%,transparent 70%)',
+    'transform:translate(-50%,-50%)',
+    'transition:left 0.4s ease,top 0.4s ease',
+    'will-change:left,top'
   ].join(';');
   document.body.appendChild(glow);
-
   document.addEventListener('mousemove', (e) => {
     glow.style.left = e.clientX + 'px';
-    glow.style.top  = e.clientY + 'px';
+    glow.style.top = e.clientY + 'px';
   });
 }
 
 /* ──────────────────────────────────────────
-   8. PHOTO UPLOAD MODAL
-   Click the profile ring to upload a photo.
+   8. CERTIFICATE LIGHTBOX
+   Click any certificate image to view full.
+   Esc or click outside to close.
 ────────────────────────────────────────── */
-let photoDataUrl = null;
+const certMeta = {
+  'https://res.cloudinary.com/dqt0mqudj/image/upload/f_auto,q_auto/1000034154_dqinew':
+    'C Programming Certification — NSIC',
+  'https://res.cloudinary.com/dq7t2qkql/image/upload/Vaisheshika-2026_qei2iq':
+    'Vaisheshika-2026 Participation Certificate'
+};
 
-function openPhotoModal() {
-  document.getElementById('photoModal').classList.add('open');
-}
-
-function closePhotoModal() {
-  document.getElementById('photoModal').classList.remove('open');
-  photoDataUrl = null;
-  document.getElementById('photoPreview').style.display  = 'none';
-  document.getElementById('photoDropZone').style.display = 'block';
-  document.getElementById('photoSaveBtn').style.display  = 'none';
-}
-
-const photoInput   = document.getElementById('photoInput');
-const photoDropZone = document.getElementById('photoDropZone');
-
-// Open file picker on drop-zone click
-photoDropZone.addEventListener('click', () => photoInput.click());
-
-// Drag-and-drop support
-photoDropZone.addEventListener('dragover', (e) => {
-  e.preventDefault();
-  photoDropZone.classList.add('drag');
-});
-photoDropZone.addEventListener('dragleave', () => photoDropZone.classList.remove('drag'));
-photoDropZone.addEventListener('drop', (e) => {
-  e.preventDefault();
-  photoDropZone.classList.remove('drag');
-  if (e.dataTransfer.files[0]) handlePhoto(e.dataTransfer.files[0]);
-});
-
-// File input change
-photoInput.addEventListener('change', () => {
-  if (photoInput.files[0]) handlePhoto(photoInput.files[0]);
-});
-
-function handlePhoto(file) {
-  const reader = new FileReader();
-  reader.onload = (e) => {
-    photoDataUrl = e.target.result;
-    const preview = document.getElementById('photoPreview');
-    preview.src = photoDataUrl;
-    preview.style.display = 'block';
-    document.getElementById('photoDropZone').style.display = 'none';
-    document.getElementById('photoSaveBtn').style.display  = 'inline-flex';
-  };
-  reader.readAsDataURL(file);
-}
-
-function savePhoto() {
-  if (!photoDataUrl) return;
-  const img = document.getElementById('profileImg');
-  img.src = photoDataUrl;
-  img.style.display = 'block';
-  document.getElementById('profilePlaceholder').style.display = 'none';
-  closePhotoModal();
-}
-
-// Close modal when clicking the backdrop
-document.getElementById('photoModal').addEventListener('click', function (e) {
-  if (e.target === this) closePhotoModal();
-});
-
-/* ──────────────────────────────────────────
-   9. CERTIFICATE LIGHTBOX
-   Click any certificate image to enlarge it.
-   Press Escape or click outside to close.
-────────────────────────────────────────── */
 function openLightbox(src) {
-    const lightbox = document.getElementById("lightbox");
-    const lightboxImg = document.getElementById("lightboxImg");
+  const lb = document.getElementById('lightbox');
+  const img = document.getElementById('lightboxImg');
+  const label = document.getElementById('lightboxLabel');
 
-    lightbox.style.display = "flex";
-    lightboxImg.src = src;
+  img.src = src;
+  label.textContent = certMeta[src] || 'Certificate';
+  lb.classList.add('open');
+  document.body.style.overflow = 'hidden';
 }
 
 function closeLightbox() {
-    document.getElementById("lightbox").style.display = "none";
+  document.getElementById('lightbox').classList.remove('open');
+  document.body.style.overflow = '';
 }
 
-// Close on backdrop click
 document.getElementById('lightbox').addEventListener('click', function (e) {
-  if (e.target === this) closeLightbox();
+  if (e.target === this || e.target.classList.contains('lightbox-label') || e.target.classList.contains('lightbox-hint'))
+    closeLightbox();
 });
 
-// Close on Escape key
 document.addEventListener('keydown', (e) => {
   if (e.key === 'Escape') closeLightbox();
 });
