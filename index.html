@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Pallapu Shiva Sai Ram — Portfolio</title>
+<meta name="description" content="Portfolio of Pallapu Shiva Sai Ram – B.Tech Student & Aspiring Software Developer."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,600;0,9..144,700;0,9..144,800;1,9..144,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+<link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+<div class="bg-layer"></div>
+<div class="bg-grid"></div>
+
+<!-- ══ NAV ══ -->
+<nav id="nav">
+  <div class="nav-w">
+    <a href="#hero" class="logo">SSR<span>.</span></a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#about">About</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#certificates">Certificates</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <button class="hbg" id="hbg" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+  <div class="mob-nav" id="mobNav">
+    <a href="#about">About</a>
+    <a href="#education">Education</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#certificates">Certificates</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+
+<!-- ══ HERO ══ -->
+<section id="hero">
+  <div class="hero">
+    <div class="hero-inner">
+      <div class="hero-left rev">
+        <div class="hero-eyebrow"><span class="pulse"></span> Open to opportunities &amp; collaborations</div>
+        <h1 class="hero-name">
+          Pallapu<br/>Shiva<br/><span class="grad">Sai Ram</span>
+        </h1>
+        <p class="hero-sub">B.Tech Student &nbsp;·&nbsp; <em>Aspiring Software Developer</em></p>
+        <p class="hero-desc">Passionate about Programming, Problem Solving, and Building Innovative Tech Solutions that create real-world impact.</p>
+        <div class="hero-btns">
+          <a href="#projects" class="btn btn-p"><i class="fa fa-code"></i> View Projects</a>
+          <a href="#contact" class="btn btn-o"><i class="fa fa-paper-plane"></i> Contact Me</a>
+        </div>
+        <div class="hero-scroll"><div class="s-line"></div><span>Scroll to explore</span></div>
+      </div>
+      <div class="hero-right rev rev-d">
+        <div class="profile-card">
+          <div class="p-glow"></div>
+          <div class="p-ring">
+            <div class="p-img-wrap" id="profileWrap" onclick="openPhotoModal()">
+              <div class="p-placeholder" id="profilePlaceholder">
+                <div class="p-initials">PSR</div>
+                <div class="p-hint"><i class="fa fa-camera"></i> Click to add photo</div>
+              </div>
+              <img id="profileImg" src="" alt="Shiva Sai Ram" style="display:none"/>
+              <div class="upload-overlay"><i class="fa fa-camera"></i></div>
+            </div>
+            <svg class="p-orbit" viewBox="0 0 360 360">
+              <circle cx="180" cy="180" r="172" fill="none" stroke="rgba(0,229,160,0.12)" stroke-width="1.5" stroke-dasharray="8 14"/>
+            </svg>
+            <div class="p-orb-dot"></div>
+          </div>
+          <div class="p-stats">
+            <div class="p-stat"><span class="p-stat-n">9.56</span><span class="p-stat-l">CGPA</span></div>
+            <div class="p-stat"><span class="p-stat-n">2</span><span class="p-stat-l">Projects</span></div>
+            <div class="p-stat"><span class="p-stat-n">2</span><span class="p-stat-l">Certs</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ ABOUT ══ -->
+<section class="sec" id="about">
+  <div class="wrap">
+    <div class="tag rev">About Me</div>
+    <div class="about-grid">
+      <div class="rev">
+        <h2 class="h2">Curious mind,<br/><span class="grad">driven coder</span></h2>
+        <p>I'm a first-year B.Tech student with a strong interest in programming and software development. I've learned C programming through arrays, strings, and pointers, and I'm actively studying Data Structures to deepen my problem-solving foundation.</p>
+        <p>I'm also learning Python and Web Development — continuously pushing my limits to build a successful career in software. I believe <em>great software starts with understanding real problems.</em></p>
+        <p>From building an AI demo at a college science fest to creating a live coding practice platform, every project I take on starts with one question: <em>how can this help someone?</em></p>
+        <div class="a-stats">
+          <div><span class="a-stat-n">9.56</span><span class="a-stat-l">Sem 1 CGPA</span></div>
+          <div><span class="a-stat-n">2</span><span class="a-stat-l">Live Projects</span></div>
+          <div><span class="a-stat-n">2</span><span class="a-stat-l">Certifications</span></div>
+        </div>
+      </div>
+      <div class="trait-cards rev rev-d">
+        <div class="trait glass">
+          <div class="trait-ic"><i class="fa fa-terminal"></i></div>
+          <div class="trait-body"><h4>Programming</h4><p>C, Python &amp; expanding to more languages and web technologies.</p></div>
+        </div>
+        <div class="trait glass">
+          <div class="trait-ic"><i class="fa fa-brain"></i></div>
+          <div class="trait-body"><h4>Learning</h4><p>Deep in DSA and Web Development to build a strong technical foundation.</p></div>
+        </div>
+        <div class="trait glass">
+          <div class="trait-ic"><i class="fa fa-lightbulb"></i></div>
+          <div class="trait-body"><h4>Problem Solver</h4><p>Breaking complex challenges into clean, minimal, effective solutions.</p></div>
+        </div>
+        <div class="trait glass">
+          <div class="trait-ic"><i class="fa fa-rocket"></i></div>
+          <div class="trait-body"><h4>Goal</h4><p>Becoming a skilled Software Developer who builds products that matter.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ EDUCATION ══ -->
+<section class="sec edu-sec" id="education">
+  <div class="wrap">
+    <div class="tag rev">Academic Background</div>
+    <h2 class="h2 rev">My <span class="grad">Education</span></h2>
+    <div class="edu-list">
+      <div class="edu-item glass rev">
+        <div class="edu-em">🎓</div>
+        <div class="edu-bd">
+          <div class="curr-badge">Current</div>
+          <h3>B.Tech — Computer Science Engineering</h3>
+          <p class="edu-inst">Geethanjali College of Engineering and Technology</p>
+          <p class="edu-score"><i class="fa fa-star" style="color:gold"></i> 1st Semester CGPA: <strong>9.56</strong></p>
+        </div>
+      </div>
+      <div class="edu-item glass rev">
+        <div class="edu-em">📚</div>
+        <div class="edu-bd">
+          <h3>Intermediate — MPC</h3>
+          <p class="edu-inst">Sri Chaitanya Junior College</p>
+          <p class="edu-score"><i class="fa fa-star" style="color:gold"></i> Marks: <strong>955 / 1000</strong></p>
+        </div>
+      </div>
+      <div class="edu-item glass rev">
+        <div class="edu-em">🏫</div>
+        <div class="edu-bd">
+          <h3>Secondary Schooling — SSC</h3>
+          <p class="edu-inst">Sri Narayana Global High School</p>
+          <p class="edu-score"><i class="fa fa-star" style="color:gold"></i> GPA: <strong>8.0</strong></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ SKILLS ══ -->
+<section class="sec" id="skills">
+  <div class="wrap">
+    <div class="tag rev">Technical Skills</div>
+    <h2 class="h2 rev">What I <span class="grad">wield</span></h2>
+    <div class="skills-wrap">
+      <div class="rev">
+        <p class="skill-sub">Proficiency</p>
+        <div class="sk-row">
+          <div class="sk-top"><span class="sk-name"><i class="fa fa-c"></i> C Programming</span><span class="sk-pct">70%</span></div>
+          <div class="sk-bar"><div class="sk-fill" data-w="70%"></div></div>
+        </div>
+        <div class="sk-row">
+          <div class="sk-top"><span class="sk-name"><i class="fa fa-diagram-project"></i> Data Structures</span><span class="sk-pct">55%</span></div>
+          <div class="sk-bar"><div class="sk-fill" data-w="55%"></div></div>
+        </div>
+        <div class="sk-row">
+          <div class="sk-top"><span class="sk-name"><i class="fa fa-puzzle-piece"></i> Problem Solving</span><span class="sk-pct">50%</span></div>
+          <div class="sk-bar"><div class="sk-fill" data-w="50%"></div></div>
+        </div>
+        <div class="sk-row">
+          <div class="sk-top"><span class="sk-name"><i class="fa fa-globe"></i> Web Development</span><span class="sk-pct">30%</span></div>
+          <div class="sk-bar"><div class="sk-fill" data-w="30%"></div></div>
+        </div>
+      </div>
+      <div class="rev rev-d">
+        <p class="skill-sub">Currently Learning</p>
+        <div class="learn-grid">
+          <div class="learn-pill glass"><i class="fa fa-python"></i> Python</div>
+          <div class="learn-pill glass"><i class="fa fa-sitemap"></i> Data Structures</div>
+          <div class="learn-pill glass"><i class="fa fa-lightbulb"></i> Adv. Problem Solving</div>
+          <div class="learn-pill glass"><i class="fa fa-code"></i> Web Development</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ PROJECTS ══ -->
+<section class="sec" id="projects">
+  <div class="wrap">
+    <div class="tag rev">Portfolio</div>
+    <h2 class="h2 rev">Things I've <span class="grad">built</span></h2>
+    <div class="proj-grid">
+
+      <!-- Featured: AI Waste Management -->
+      <div class="proj-featured glass rev">
+        <div class="pf-visual waste">
+          <span class="big-icon">♻️</span>
+        </div>
+        <div class="pf-body">
+          <div class="feat-label"><i class="fa fa-star"></i> Featured Project</div>
+          <div class="pc-tag" style="position:static;display:inline-block;margin-bottom:.8rem">AI · IoT</div>
+          <h3>AI Smart Waste Management System</h3>
+          <p>A demo model showcasing how AI, IoT, and scanning technology can revolutionize waste management — from identification to segregation and collection efficiency.</p>
+          <ul class="proj-bullets">
+            <li><i class="fa fa-circle"></i> Designed &amp; built for Vaisheshika-2026 Science Fest at Geethanjali College</li>
+            <li><i class="fa fa-circle"></i> Integrates AI-based waste identification with IoT sensor network</li>
+            <li><i class="fa fa-circle"></i> Showcased real-time scanning and smart segregation logic</li>
+            <li><i class="fa fa-circle"></i> Received official Participation Certificate</li>
+          </ul>
+          <div class="tech-chips"><span>AI</span><span>IoT</span><span>Scanning Tech</span><span>Demo Model</span></div>
+          <div class="proj-event"><i class="fa fa-trophy"></i> Presented at <strong>Vaisheshika-2026 Science Fest</strong> — Geethanjali College</div>
+        </div>
+      </div>
+
+      <!-- CodeC — clickable card -->
+      <a href="https://improve-code-path.lovable.app/" target="_blank" rel="noopener" class="proj-card glass rev" style="text-decoration:none;color:inherit">
+        <div class="pc-thumb thumb-codec">
+          <i class="fa fa-laptop-code" style="color:rgba(14,165,233,.8)"></i>
+          <div class="pc-tag live-tag">Live · Web App</div>
+        </div>
+        <div class="pc-body">
+          <h3>CodeC — C &amp; Logical Reasoning Platform</h3>
+          <p>A focused practice platform for sharpening C programming and logical reasoning, one problem at a time. Features structured problems and a clean learning interface.</p>
+          <div class="tech-chips"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
+          <span class="btn btn-p btn-sm" style="margin-top:.5rem;pointer-events:none"><i class="fa fa-arrow-up-right-from-square"></i> Visit Live Site</span>
+        </div>
+      </a>
+
+      <!-- WIP -->
+      <div class="proj-card glass rev rev-d">
+        <div class="pc-thumb thumb-wip">
+          <i class="fa fa-hammer" style="color:rgba(139,92,246,.8)"></i>
+          <div class="pc-tag" style="background:rgba(139,92,246,.1);border-color:rgba(139,92,246,.22);color:#a78bfa">In Progress</div>
+        </div>
+        <div class="pc-body">
+          <h3>More Projects Coming Soon</h3>
+          <p>Actively building more software projects as part of continuous learning and skill enhancement. Stay tuned!</p>
+          <div class="wip-items">
+            <div class="wip-item"><i class="fa fa-circle-notch fa-spin"></i> Python applications</div>
+            <div class="wip-item"><i class="fa fa-circle-notch fa-spin"></i> DSA visualizer</div>
+            <div class="wip-item"><i class="fa fa-circle-notch fa-spin"></i> Full-stack web projects</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══ CERTIFICATES ══ -->
+<section class="sec certs-sec" id="certificates">
+  <div class="wrap">
+    <div class="tag rev">Credentials</div>
+    <h2 class="h2 rev">Certificates &amp; <span class="grad">Achievements</span></h2>
+    <div class="cert-grid">
+
+      <div class="cert-card glass rev">
+        <div class="cert-ic"><i class="fa fa-certificate" style="color:var(--a1)"></i></div>
+        <div class="cert-bd">
+          <div class="grade">A1 Grade</div>
+          <h3>C Programming Certification</h3>
+          <p>The National Small Industries Corporation LTD.<br/>Technical Services Centre</p>
+          <div class="cert-img-wrap">
+            <img src="https://res.cloudinary.com/dqt0mqudj/image/upload/f_auto,q_auto/1000034154_dqinew" alt="NSIC C Programming Certificate" class="cert-img" onclick="openLightbox(this.src)"/>
+            <div class="cert-img-overlay"><i class="fa fa-magnifying-glass-plus"></i> View Full</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="cert-card glass rev rev-d">
+        <div class="cert-ic"><i class="fa fa-award" style="color:gold"></i></div>
+        <div class="cert-bd">
+          <div class="grade" style="background:rgba(255,200,0,.08);border-color:rgba(255,200,0,.22);color:gold">Participation</div>
+          <h3>Vaisheshika-2026 Certificate</h3>
+          <p>Geethanjali College of Engineering and Technology<br/>Technical Project Presentation</p>
+          <div class="cert-img-wrap">
+            <img src="https://res.cloudinary.com/dq7t2qkql/image/upload/Vaisheshika-2026_qei2iq" alt="Vaisheshika 2026 Certificate" class="cert-img" onclick="openLightbox(this.src)"/>
+            <div class="cert-img-overlay"><i class="fa fa-magnifying-glass-plus"></i> View Full</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="ach-strip rev">
+      <div class="ach-row glass"><div class="ach-ic"><i class="fa fa-trophy"></i></div><span class="ach-txt">Participated in Vaisheshika-2026 Science Fest</span></div>
+      <div class="ach-row glass"><div class="ach-ic"><i class="fa fa-robot"></i></div><span class="ach-txt">Built &amp; Presented AI Smart Waste Management Demo Model</span></div>
+      <div class="ach-row glass"><div class="ach-ic"><i class="fa fa-scroll"></i></div><span class="ach-txt">Received Participation Certificate for Technical Project Presentation</span></div>
+      <div class="ach-row glass"><div class="ach-ic"><i class="fa fa-star"></i></div><span class="ach-txt">Secured A1 Grade in C Programming — NSIC Certification</span></div>
+      <div class="ach-row glass"><div class="ach-ic"><i class="fa fa-graduation-cap"></i></div><span class="ach-txt">Achieved 9.56 CGPA in 1st Semester of B.Tech</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ CONTACT ══ -->
+<section class="sec" id="contact">
+  <div class="wrap">
+    <div class="tag rev">Get In Touch</div>
+    <h2 class="h2 rev">Let's <span class="grad">connect</span></h2>
+    <div class="contact-wrap">
+      <div class="rev">
+        <p class="contact-intro">I'm always open to new opportunities, collaborations, and learning experiences. Whether you have a project idea or just want to say hi — my inbox is always open!</p>
+        <div class="c-links">
+          <a href="mailto:shivasairampallapu23@gmail.com" class="c-link glass">
+            <div class="c-ic"><i class="fa fa-envelope"></i></div>
+            <div class="c-tx"><span class="c-lbl">Email</span><span class="c-val">shivasairampallapu23@gmail.com</span></div>
+            <i class="fa fa-arrow-right c-arr"></i>
+          </a>
+          <a href="tel:7670838102" class="c-link glass">
+            <div class="c-ic"><i class="fa fa-phone"></i></div>
+            <div class="c-tx"><span class="c-lbl">Phone</span><span class="c-val">+91 76708 38102</span></div>
+            <i class="fa fa-arrow-right c-arr"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/pallapu-shiva-sai-ram-74a7bb3b6" target="_blank" class="c-link glass">
+            <div class="c-ic"><i class="fa-brands fa-linkedin-in"></i></div>
+            <div class="c-tx"><span class="c-lbl">LinkedIn</span><span class="c-val">pallapu-shiva-sai-ram</span></div>
+            <i class="fa fa-arrow-right c-arr"></i>
+          </a>
+        </div>
+      </div>
+      <div class="rev rev-d">
+        <form class="c-form glass" id="contactForm">
+          <div class="fg"><label>Your Name</label><input type="text" placeholder="Rahul Sharma" required/></div>
+          <div class="fg"><label>Your Email</label><input type="email" placeholder="hello@example.com" required/></div>
+          <div class="fg"><label>Message</label><textarea rows="5" placeholder="Tell me about your idea or opportunity..." required></textarea></div>
+          <button type="submit" class="btn btn-p btn-full"><i class="fa fa-paper-plane"></i> Send Message</button>
+          <div class="form-ok" id="formOk"><i class="fa fa-circle-check"></i> Message sent! I'll get back to you soon.</div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ FOOTER ══ -->
+<footer>
+  <div class="wrap">
+    <div class="foot-in">
+      <span class="logo">SSR<span>.</span></span>
+      <p>© 2026 <strong>Pallapu Shiva Sai Ram</strong>. All rights reserved.</p>
+      <p>Made with <i class="fa fa-heart" style="color:var(--a1)"></i> and lots of curiosity</p>
+    </div>
+  </div>
+</footer>
+
+<!-- ══ PHOTO UPLOAD MODAL ══ -->
+<div class="modal-bg" id="photoModal">
+  <div class="modal">
+    <h3>Upload Your Photo</h3>
+    <p>Choose a clear profile photo — it will appear in the hero section.</p>
+    <img class="modal-preview" id="photoPreview" alt="Preview"/>
+    <div class="drop-zone" id="photoDropZone">
+      <i class="fa fa-cloud-arrow-up"></i>
+      <p>Drag &amp; drop your photo here<br/><span>or click to browse files</span></p>
+    </div>
+    <input type="file" id="photoInput" accept="image/*" style="display:none"/>
+    <div class="modal-btns">
+      <button class="btn btn-o btn-sm" onclick="closePhotoModal()">Cancel</button>
+      <button class="btn btn-p btn-sm" id="photoSaveBtn" style="display:none" onclick="savePhoto()"><i class="fa fa-check"></i> Set Photo</button>
+    </div>
+  </div>
+</div>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox">
+    <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
+
+    <img id="lightboxImg" src="">
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
